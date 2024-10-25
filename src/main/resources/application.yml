@@ -1,0 +1,33 @@
+server:
+  port:
+    8081
+spring:
+  application:
+    name: EmployeeManagement
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: rtech
+    password: rtech
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+employee:
+  module:
+    messages:
+      save-success: Employee is saved with id value
+      save-failure: Employee is not saved with value
+      find-by-id-failure: Employee is not found
+      find-by-name-failure: Employee not found
+      update-success: Employee is updated
+      update-failure: Employee updation is failure
+      delete-success: Employee is deleted successfully
+      delete-failure: Employee deletion is failure
+      status-change-success: Employee status is change successfully
+      status-change-failure:  Employee status-change is failure
